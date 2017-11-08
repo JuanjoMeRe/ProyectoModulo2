@@ -1,0 +1,36 @@
+﻿@model  VideoGamesCodexASP.Models.Videogames
+
+
+
+
+<h2>Game Title</h2>
+<a href="~/Home/Edit/@Model.id" class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-pencil"></span> Edit
+</a>
+<a onclick="return confirm('¿Deseas eliminar esta tarea?')" ; href="~/Home/Remove/@Model.id" class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-trash"></span> Remove
+</a>
+
+<div class="panel panel-default">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>NAME</dt>
+            <dd>@Model.name</dd>
+            <dt>PUBLISHER</dt>
+            <dd>@(Model.publisher)</dd>
+            <dt>YEAR</dt>
+            <dd>@Model.year</dd>
+            <dt>GENRE</dt>
+            <dd>@Model.Genre</dd>
+            <dt>PLATFORM</dt>
+            <dd>@Model.Platform</dd>
+            <dt>SCORE</dt>
+            <dd>@Model.score</dd>
+            <dt>ONLINE</dt>
+            <dd>@Model.online</dd>
+            <dt>PEGI</dt>
+            <dd>@Model.PEGI</dd>
+            </dl>
+        </div>
+    </div>

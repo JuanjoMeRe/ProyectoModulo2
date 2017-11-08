@@ -1,0 +1,45 @@
+﻿@model List<VideoGamesCodexASP.Models.Videogames>
+@{
+    ViewBag.Title = "Videogame Codex";
+}
+
+<h1>Game List</h1>
+<a href="~/home/crear/VideoGamesForm" class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-plus"></span> New Game
+</a>
+<a href="~/Home/Ranking" class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-arrow-up"></span> RANKING
+</a>
+
+<table class="table table-striped table-inverse">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Publisher</th>
+            <th>Genre</th>
+            <th>Acciones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VideoGamesCodexASP.Models.Videogames game in Model)
+        { 
+            <tr>
+                
+                <td>@game.name</td>
+                <td>@game.publisher</td>
+                <td>@game.Genre</td>
+                
+                <td>
+                    <a href="~/Home/Show/@game.id" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-eye-open"></span> SHOW
+                    </a>
+
+
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
